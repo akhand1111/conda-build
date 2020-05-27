@@ -40,7 +40,7 @@ install:
   - conda config --set always_yes yes
   - conda config --set auto_update_conda False
   - conda info
-  # avoids a python 3.7 problem
+  # avoids a python 3.7 probl em
   - conda install -q cytoolz
   - conda install -q anaconda-client requests filelock contextlib2 jinja2 patchelf ripgrep pyflakes beautifulsoup4 chardet pycrypto glob2 psutil pytz tqdm conda-package-handling py-lief python-libarchive-c
   - pip install pkginfo
