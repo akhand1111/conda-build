@@ -35,7 +35,7 @@ addons:
 install:
   # show which shell we are running
   - ps -ef | grep $$
-  - if [ `uname -m` = 'aarch64' ]; then
+  - if [ `uname -m` == 'aarch64' ]; then
       wget -q "https://github.com/conda-forge/miniforge/releases/download/4.8.2-1/Miniforge3-4.8.2-1-Linux-aarch64.sh" -O miniconda.sh;
       chmod +x miniconda.sh;
     else
@@ -52,7 +52,7 @@ install:
   - conda install -q anaconda-client requests filelock contextlib2 jinja2 patchelf ripgrep pyflakes beautifulsoup4 chardet pycrypto glob2 psutil pytz tqdm conda-package-handling py-lief python-libarchive-c
   - pip install pkginfo
   - if [[ "$FLAKE8" == "true" ]]; then
-      if [ `uname -m` = 'aarch64' ]; then
+      if [ `uname -m` == 'aarch64' ]; then
         conda install -q flake8==3.7.9;
       else
         conda install -q flake8;
