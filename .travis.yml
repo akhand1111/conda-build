@@ -52,11 +52,7 @@ install:
   - conda install -q anaconda-client requests filelock contextlib2 jinja2 patchelf ripgrep pyflakes beautifulsoup4 chardet pycrypto glob2 psutil pytz tqdm conda-package-handling py-lief python-libarchive-c
   - pip install pkginfo
   - if [[ "$FLAKE8" == "true" ]]; then
-      if [ `uname -m` == 'aarch64' ]; then
-        conda install -q flake8==3.7.9;
-      else
-        conda install -q flake8;
-      fi  
+      conda install -q flake8==3.7.9;
     else
       pip install -r requirements-docs.txt;
     fi
