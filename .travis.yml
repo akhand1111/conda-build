@@ -8,7 +8,9 @@ matrix:
         - CONDA_VERSION=release
       dist: xenial
     - python: 3.7
-      arch: arm64
+      arch: arm64-graviton2
+      virt: lxd
+      group: edge
       env:
         - FLAKE8=true
         - CONDA_VERSION=release
@@ -19,7 +21,9 @@ matrix:
         - CONDA_VERSION=release
       dist: xenial
     - python: 3.7
-      arch: arm64
+      arch: arm64-graviton2
+      virt: lxd
+      group: edge
       env:
         - DOCS=true
         - CONDA_VERSION=release
